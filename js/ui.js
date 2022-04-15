@@ -15,3 +15,6 @@ UI.prototype.loadAllTodos = (todos) => {
     todoList.innerHTML += ` <span><p>${todo.title}</p><a href="#"><img src="https://img.icons8.com/material-sharp/24/000000/delete-trash.png"/></a></span>`;
   });
 };
+UI.prototype.displayMessages=()=>{
+    alert('Tüm Alanları Doldurunuz')
+}

@@ -17,7 +17,7 @@ function addTodo(e) {
     const title=todoTitle.value;
     const todoText=text.value;
     if(title==''||todoText==''){
-       console.log('title giriniz')
+       ui.displayMessages();
     }
     else{
         const newTodo= new Todo(title,todoText)
