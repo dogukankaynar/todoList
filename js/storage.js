@@ -13,3 +13,13 @@ Storage.prototype.getTodosFromStorage = function () {
   }
   return todos;
 };
+Storage.prototype.deleteTodoStorage=function(e){
+    let todos =this.getTodosFromStorage()
+    todos.forEach(function(todo,index){
+        if(e===todos.title){
+            todos.splice(index,1);
+        }
+    })
+    localStorage.setItem("todos",JSON.stringify(todos));
+    
+}
