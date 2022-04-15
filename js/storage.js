@@ -16,7 +16,7 @@ Storage.prototype.getTodosFromStorage = function () {
 Storage.prototype.deleteTodoStorage=function(e){
     let todos =this.getTodosFromStorage()
     todos.forEach(function(todo,index){
-        if(e===todos.title){
+        if(e===todo.title){
             todos.splice(index,1);
         }
     })

@@ -18,7 +18,7 @@ todoList.addEventListener('click',deleteTodo)
 function deleteTodo (e){
  if(e.target.id==='delete'){
      ui.deleteTodoUI(e.target)
-     storage.deleteTodoStorage(e.target.parentElement.parentElement.value)
+     storage.deleteTodoStorage(e.target.parentElement.parentElement.textContent)
  }
 }
 
