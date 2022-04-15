@@ -2,6 +2,7 @@ const todoTitle = document.getElementById('todoTitle');
 const addBtn=document.getElementById('addBtn')
 const text = document.getElementById('todoText')
 const storage = new Storage();
+const ui=new UI();
 eventListeners()
 
 function eventListeners() {
@@ -21,6 +22,7 @@ function addTodo(e) {
 
     }
 
+    ui.clearInputs(todoTitle,text)
     e.preventDefault();
 
 }
