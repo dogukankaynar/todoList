@@ -9,14 +9,22 @@
   </head>
   <body>
     <div class="container">
-      <div class="todo-task">
-        <div class="add-todo">
-          <input type="text" id="todoTitle" placeholder="todo text"><button id="addBtn">add</button>
+      <div class="row">
+        <div class="todo-task">
+          <div class="add-todo">
+            <input type="text" id="todoTitle" placeholder="todo text"><button id="addBtn">add</button>
+          </div>
+          <div class="add-message"><textarea id='todoText' name="text" id="" cols="30" rows="10" placeholder="todo message"></textarea></div>
+          <hr>
         </div>
-        <div class="add-message"><textarea id='todoText' name="text" id="" cols="30" rows="10" placeholder="todo message"></textarea></div>
-        <hr>
+        <div class="todo-menu-div"><div class="todo-menu"></div></div>
       </div>
-      <div class="todo-menu">
+      <div class="row">
+        <div class="todo-message">
+          <span><p id="todoMessage"></p></spans>
+        </div>
+      </div>
+  
       </div>
     </div>
     <script src='./js/ui.js'></script>

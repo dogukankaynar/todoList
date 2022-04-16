@@ -2,19 +2,32 @@ const todoTitle = document.getElementById('todoTitle');
 const addBtn=document.getElementById('addBtn')
 const text = document.getElementById('todoText')
 const todoList = document.querySelector(".todo-menu");
+const todoMenuDiv=document.querySelector(".todo-menu-div")
 const storage = new Storage();
 const ui=new UI();
 eventListeners()
 
+
 function eventListeners() {
 addBtn.addEventListener('click',addTodo);
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded',function(e){
     let todos =storage.getTodosFromStorage()
     ui.loadAllTodos(todos)
 })
+todoMenuDiv.addEventListener('click',todoMessage)
 todoList.addEventListener('click',deleteTodo)
 }
+function todoMessage(e){
+    let todos =storage.getTodosFromStorage()
+    todos.forEach(function(todo){
+        if(e.target.textContent===todo.title){
+            const todoMessage=document.getElementById('todoMessage')
+            todoMessage.innerHTML=todo.todoText
+        }
+    })
 
+    
+}
 function deleteTodo (e){
  if(e.target.id==='delete'){
      ui.deleteTodoUI(e.target)
